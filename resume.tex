@@ -1,0 +1,159 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Samyog Lamsal}}\\
+	Ashburn, VA $\cdot$ samyoglamsal@outlook.com $\cdot$ 703.380.2690 $\cdot$ github.com/samyoglamsal \\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of Maryland, College Park}\hfill College Park, MD\\
+\textit{BS Computer Science} \textit{GPA: 3.85 / 4.0} \hfill Aug 2020 - Jun 2023 \\
+\textit{Minor in Mathematics} \\
+\vspace{2mm}
+Relevant Coursework: Object Oriented Programming II, Linear Algebra, Discrete Structures, Introduction to Computer Systems, Algorithms, Organization of Programming Languages \\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Capital One} \hfill McLean, VA \\
+\textit{Principal Software Engineer} \hfill Aug 2024 - Present \\
+\vspace{0mm}
+\begin{itemize}
+    \item Deployed infrastructure for OpenTelemetry logging gateways
+    \item Migrated 40\% of legacy Splunk forwarders to OTel agent, created Claude skill to help automate migration
+    \item Developed 
+\end{itemize}
+\textit{Senior Software Engineer} \hfill Aug 2023 - Aug 2024 \\
+\vspace{0mm}
+\begin{itemize}
+    \item Built and deployed self-service tool for 
+\end{itemize}
+
+\textbf{Capital One} \hfill McLean, VA \\
+\textit{Software Engineering Intern} \hfill Jun 2022 - Aug 2022 \\
+\vspace{0mm}
+\begin{itemize}
+	\item Developed internal debugging tool using Python and Splunk to locate and provide context for bugs found in customer-facing software
+	\item Utilized test-driven development to build and deploy the application in fewer than ten weeks
+	\item Deployed application on AWS Lambda to execute queries as-needed
+	\item Wrote documentation for application with Swagger to provide a description of our REST API to Capital One employees
+	\item Used Git and Jira to track and coordinate efforts amongst other interns
+\end{itemize}
+
+\header{Projects}
+{\textbf{Crossword Solver}} {\sl Python} \hfill https://github.com/samyoglamsal/xwords\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Wrote a program that solves a given crossword puzzle given a word bank
+    \item Allows users to generate skeleton crossword puzzles given size parameters
+    \item Uses priority queue along with BFS to optimize puzzle solving
+\end{itemize}
+\vspace*{2mm}
+{\textbf{K-Means Clustering}} {\sl Python} \hfill https://github.com/samyoglamsal/kmeans\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Used k-means clustering algorithm to segment image data without supervision
+    \item Attempts to find objects within an image and groups pixels associated with that object into buckets
+        for future analysis
+\end{itemize}
+\vspace*{2mm}
+{\textbf{Firebase Chatroom}} {\sl Java} \hfill https://github.com/samyoglamsal/FirebaseChatroom\\
+\vspace{-1mm} 
+\begin{itemize} \itemsep 1pt
+    \item Created a multi-user chatroom using Google's FireBase as an Android application
+    \item Allows for near-instanct communications between an unlimited number of users
+    \item Keeps records of user logins and chat history
+\end{itemize}
+\vspace*{2mm}
+{\textbf{MicrOCaml Programming Language}} {\sl OCaml} \hfill https://github.com/samyoglamsal/microcaml
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Implemented a lexer using regular expressions to tokenize program code
+    \item Worte a parser to convert tokenized input into an abstract symbol tree
+    \item Created an interpreter to run program code in real time
+\end{itemize}
+\vspace*{2mm}
+
+\header{Additional Information}
+\begin{tabular}{ l l }
+	Programming Languages:   & Go, Python, C++ \\
+	Frameworks and Tools:    & OpenTelemetry, AWS \\
+	Certifications:          & AWS Solutions Architect \\
+\end{tabular}
+\vspace{2mm}
+
+\end{document}
